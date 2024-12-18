@@ -1,0 +1,33 @@
+.div {
+    width: 520px;
+    height: 350px;
+    background: aqua;
+    margin: auto;
+}
+button{
+    margin-left: 10px;
+    height: 35px;
+}
+input#input {
+    margin-left: 65px;
+    margin-top: 40px;
+    width: 315px;
+    height: 30px;
+}
+h3 {
+    display: inline-block;
+    margin-left: 180px;
+}
+p#ptag {
+    display: inline-block;
+    font-size: larger;
+}
+h1{
+    text-align: center;
+}
+td.great {
+    background: darkgray;
+    text-align: center;
+    font-size: 24px;
+}
+

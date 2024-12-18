@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax</title>
+    <link rel="stylesheet" href="cssjs/style.css" />
+  </head>
+  <body>
+    <style>
+      .div {
+        width: 520px;
+        height: 350px;
+        background: aqua;
+        margin: auto;
+      }
+      button {
+        margin-left: 10px;
+        height: 35px;
+      }
+      input#input {
+        margin-left: 65px;
+        margin-top: 40px;
+        width: 315px;
+        height: 30px;
+      }
+      h3 {
+        display: inline-block;
+        margin-left: 180px;
+      }
+      p#ptag {
+        display: inline-block;
+        font-size: larger;
+      }
+      h1 {
+        text-align: center;
+      }
+      td.great {
+        background: darkgray;
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+    <div class="div">
+      <h1>CGPA Calculator</h1>
+      <table>
+        <tr class="one">
+          <td class="great">A+</td>
+          <td class="great">A</td>
+          <td class="great">A-</td>
+          <td class="great">B+</td>
+          <td class="great">B</td>
+          <td class="great">B-</td>
+          <td class="great">C+</td>
+          <td class="great">C</td>
+          <td class="great">D</td>
+        </tr>
+
+        <tr class="two">
+          <td><button>4.00</button></td>
+          <td><button>3.75</button></td>
+          <td><button>3.50</button></td>
+          <td><button>3.25</button></td>
+          <td><button>3.00</button></td>
+          <td><button>2.75</button></td>
+          <td><button>2.50</button></td>
+          <td><button>2.25</button></td>
+          <td><button>2.00</button></td>
+        </tr>
+        <tr class="three">
+          <td><button>6</button></td>
+          <td><button>7</button></td>
+          <td><button>8</button></td>
+          <td><button>9</button></td>
+          <td><button>+</button></td>
+          <td><button>/</button></td>
+          <td><button>(</button></td>
+          <td><button>)</button></td>
+        </tr>
+      </table>
+      <input id="input" />
+      <button id="btn">click</button>
+      <h3>
+        CGPA :
+        <p id="ptag">result</p>
+      </h3>
+    </div>
+    <script>
+      let button = document.querySelectorAll("td button");
+      let box = document.getElementById("input").value;
+
+      let clickbtn = document.getElementById("btn");
+
+      let result = document.getElementById("ptag");
+
+      for (let butt of button) {
+        butt.addEventListener("click", e => {
+          let buttontxt = e.target.innerHTML;
+
+          let display = document.getElementById("input");
+          let disp = (display.value += buttontxt);
+
+          clickbtn.addEventListener("click", () => {
+            let f = eval(disp);
+            result.innerHTML = f;
+            display.value = "";
+          });
+        });
+      }
+    </script>
+
+    <script src="cssjs/project.js"></script>
+  </body>
+</html>
